@@ -1,0 +1,7 @@
+name: adsantos/helloworld
+version: 0.0.5
+runtime: java8
+cmd: com.example.fn.HelloFunction::handleRequest
+build_image: fnproject/fn-java-fdk-build:1.0.55
+run_image: fnproject/fn-java-fdk:1.0.55
+format: http

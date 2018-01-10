@@ -1,0 +1,13 @@
+FROM node:6
+
+ARG TARGET=http-trigger
+RUN apt-get update &&  apt-get install git
+
+ADD ${TARGET}/package.json /
+
+RUN npm install
+
+ADD lib/helper.js /lib/
+ADD ${TARGET}/kubeless.js /
+
+CMD ["node", "/kubeless.js"]

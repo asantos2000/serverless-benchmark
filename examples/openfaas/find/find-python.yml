@@ -1,0 +1,9 @@
+provider:
+  name: faas
+  gateway: http://virtualbox:31112
+
+functions:
+  find-python:
+    lang: python
+    handler: ./find-python
+    image: adsantos/find-python
